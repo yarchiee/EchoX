@@ -4,12 +4,9 @@ import Button from "./Button";
 const MainContainer = styled.div`
   width: 100%;
   height: 100%;
-  /* margin-top: 40px; */
   margin-bottom: 40px;
   margin-left: 100px;
   margin-right: 200px;
-  /* position: fixed; */
-  /* border-right: 1px solid #666666; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -60,7 +57,6 @@ const Img = styled.div`
 const Des2 = styled.div`
   color: #ffffff;
   margin-top: 15px;
-  /* margin-bottom: 40px; */
 `;
 const Link = styled.a`
   color: #ffffff;
@@ -85,23 +81,59 @@ const Flex2 = styled.div`
     flex-direction: column;
   }
 `;
+const SelectTitle = styled.div`
+  display: none;
+  @media screen and (max-width: 1011px) {
+    display: block;
+    color: #00ff62;
+  }
+`;
+const Select = styled.select`
+  display: none;
+  @media screen and (max-width: 1011px) {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    display: block;
+    width: 100%;
+    height: 48px;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+`;
+const Option = styled.option``;
 
 function Main() {
   const inputlist = [
-    { id: 1, title: "欄位 : 一般欄位", placeholder: "填入欄位資料" },
+    { id: 1, title: "欄位 : 一般欄位", placeholder: "    填入欄位資料" },
     {
       id: 2,
       title: "欄位 : 不可修改的欄位",
-      placeholder: "不可修改的欄位資料",
+      placeholder: "    不可修改的欄位資料",
     },
-    { id: 3, title: "欄位 : 一般欄位", placeholder: "填入欄位資料" },
-    { id: 4, title: "欄位 : 一般欄位", placeholder: "填入欄位資料" },
-    { id: 5, title: "欄位 : 一般欄位", placeholder: "填入欄位資料" },
+    { id: 3, title: "欄位 : 一般欄位", placeholder: "    填入欄位資料" },
+    { id: 4, title: "欄位 : 一般欄位", placeholder: "    填入欄位資料" },
+    { id: 5, title: "欄位 : 一般欄位", placeholder: "    填入欄位資料" },
+  ];
+  const list = [
+    { name: "選單1" },
+    { name: "選單2" },
+    { name: "選單3" },
+    { name: "選單4" },
+    { name: "選單5" },
   ];
   return (
     <>
       <MainContainer>
         <InputBlock>
+          <SelectTitle>側邊選單標題</SelectTitle>
+          <Select id="ddlProducts" name="ddProducts">
+            {list.map((item) => {
+              return <Option>{item.name}</Option>;
+            })}
+          </Select>
           {inputlist.map((item) => {
             return (
               <>
@@ -114,7 +146,7 @@ function Main() {
                 {item.title === "欄位 : 不可修改的欄位" && (
                   <>
                     <InputTitle>{item.title}</InputTitle>
-                    <Input item={item} background={"#cccccc"} />
+                    <Input item={item} background={"#cccccc"} readOnly="true" />
                   </>
                 )}
               </>

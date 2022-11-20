@@ -1,23 +1,34 @@
 import styled from "styled-components";
 const InputItem = styled.input`
-  width: 95%;
+  width: 100%;
   height: 48px;
-  border-radius: 4px;
+  margin-right: auto;
+  border: 0;
+  padding: 0;
+  background-color: ${(props) => props.background};
+  border-radius: 2px;
+  font-weight: 600;
+`;
+const InputContainer = styled.div`
+  width: 100%;
+  height: 48px;
   margin-bottom: 20px;
   color: #212121;
-  padding-left: 15px;
-  font-weight: 600;
   font-size: 16px;
-  background-color: ${(props) => props.background};
+  border: 0;
+  padding: 0;
 `;
 
-function Input({ item, background }) {
+function Input({ item, background, readOnly }) {
   return (
     <>
-      <InputItem
-        placeholder={item.placeholder}
-        background={background}
-      ></InputItem>
+      <InputContainer>
+        <InputItem
+          placeholder={item.placeholder}
+          background={background}
+          readOnly={readOnly}
+        />
+      </InputContainer>
     </>
   );
 }

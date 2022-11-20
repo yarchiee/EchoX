@@ -2,11 +2,7 @@ import styled from "styled-components";
 import SideBar from "../components/SideBar";
 import Main from "../components/Main";
 const BackGround = styled.div`
-  /* width: 100vw; */
-  /* height: 100vh; */
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   background-color: #212121;
 `;
 

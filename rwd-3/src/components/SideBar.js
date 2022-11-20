@@ -2,10 +2,8 @@ import styled from "styled-components";
 const SideBarContainer = styled.div`
   width: 340px;
   height: 100%;
-  /* position: fixed; */
   border-right: 1px solid #666666;
   color: white;
-  /* left: 0; */
   @media screen and (max-width: 1011px) {
     display: none;
   }
