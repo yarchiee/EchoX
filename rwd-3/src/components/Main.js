@@ -186,7 +186,6 @@ function Main() {
           <Button type={"儲存"} background={"#00FF62"} color={"#000000"} />
         </Flex>
         <Flex2>
-          {" "}
           <Button type={"儲存"} background={"#00FF62"} color={"#000000"} />
           <Button
             type={"重填"}
