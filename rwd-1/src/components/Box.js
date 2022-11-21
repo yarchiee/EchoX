@@ -13,7 +13,6 @@ const BoxContainer = styled.div`
 `;
 const BoxScope = styled.div`
   margin: 30px 26px 30px 30px;
-  /* border: 1px solid #00ff62; */
   height: 390px;
   display: flex;
   flex-direction: column;

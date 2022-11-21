@@ -10,7 +10,6 @@ const BackGround = styled.div`
 
 const Container = styled.div`
   width: 880px;
-  /* border: 1px solid #00ff62; */
   display: flex;
   margin-top: 40px;
   margin-bottom: 40px;
